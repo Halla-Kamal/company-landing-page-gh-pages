@@ -1,0 +1,635 @@
+@font-face {
+  font-family: ar-font;
+  src: url(../fonts/Tajawal-Regular.ttf);
+}
+
+body {
+  font-family: ar-font, Arial, sans-serif;
+  direction: rtl;
+}
+
+*:focus {
+  box-shadow: none !important;
+}
+
+/* navbar */
+nav.navbar {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  border-bottom: 1px solid transparent;
+  z-index: 20;
+  text-align: right;
+}
+
+nav.navbar .navbar-brand img {
+  width: 70%;
+  float: left;
+}
+
+.navbar.navbar ul.navbar-nav li {
+  text-align: right;
+}
+
+nav.navbar ul.navbar-nav li a.nav-link {
+  color: #e8e8e8;
+  font-size: 16px;
+  line-height: 40px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+nav.navbar ul.navbar-nav li a.nav-link:hover,
+nav.navbar ul.navbar-nav li a.nav-link.active {
+  color: #16aeca;
+  background-color: #ffffff;
+}
+
+/* navbar when scrolling */
+nav.navbar.noTransparrent ul.navbar-nav li a.nav-link {
+  color: #16aeca;
+}
+
+nav.navbar.noTransparrent ul.navbar-nav li a.nav-link:hover,
+nav.navbar.noTransparrent ul.navbar-nav li a.nav-link.active {
+  color: #efefef;
+  background-color: #16aeca;
+}
+
+nav.navbar.noTransparrent {
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+nav.navbar.noTransparrent .navbar-brand img {
+  width: 50%;
+}
+
+/* collapse icon */
+nav.navbar button.navbar-toggler {
+  margin: 30px 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+nav.navbar button.navbar-toggler span {
+  color: #efefef;
+}
+
+nav.navbar.noTransparrent button.navbar-toggler span {
+  color: #16aeca;
+}
+
+/* header */
+header {
+  background-image: url(../img/bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+header .overlay {
+  background: rgba(41, 153, 155, 0.8);
+  background: linear-gradient(to right,
+      rgba(41, 153, 155, 0.8) 0%,
+      rgba(211, 224, 234, 0.7) 100%);
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* slider-carousel */
+header .overlay .slider .carousel-inner .carousel-item {
+  min-height: 100vh;
+  /* opacity: 0; */
+}
+
+header .overlay .slider .carousel-inner .carousel-item .carousel-caption h3 {
+  font-size: 30px;
+  line-height: 60px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+header .overlay .slider .carousel-inner .carousel-item .carousel-caption {
+  bottom: 25%;
+}
+
+header .overlay .slider .carousel-inner .carousel-item .carousel-caption a {
+  font-size: 18px;
+  line-height: 50px;
+  background-color: #16aeca;
+  color: #ffffff;
+  border-radius: 30px;
+  padding: 0px 2rem;
+  margin-top: 30px;
+  display: inline-block;
+  transition: all 1s ease;
+}
+
+header .overlay .slider .carousel-inner .carousel-item .carousel-caption a:hover {
+  text-decoration: none;
+  background-color: #e6dd3b;
+  color: #555555;
+}
+
+header .overlay .slider .carousel-inner .carousel-item.active {
+  opacity: 1;
+}
+
+header .overlay .slider .carousel-inner .carousel-item.active .carousel-caption {
+  opacity: 1;
+}
+
+/* cards*/
+.title h2 {
+  font-size: 30px;
+  color: #1b1717;
+}
+
+/*flex يجب علينا وضع هذه الخاصية للابن "جسم البطاقة" لأن البطاقة لديها قيمة عرض*/
+.card-body {
+  min-width: 0;
+}
+
+/* لحل مشكلة أحجام البطاقات الغير متساوية */
+.card .card-title {
+  height: 50px;
+  overflow: hidden;
+}
+
+.card .card-body h5 {
+  color: #070c0c;
+}
+
+.card .card-body p {
+  color: #919191;
+  display: none;
+}
+
+.services .card img {
+  width: 150px;
+  margin: 10px auto;
+}
+
+.services .card:hover {
+  height: 350px;
+}
+
+.services .card:hover img {
+  width: 120px;
+  margin: 10px auto;
+}
+
+.services .card:hover .card-body p {
+  display: block;
+}
+
+.services .card {
+  transition: all 1s ease-in-out;
+}
+
+.services .card img {
+  transition: all 1s ease-in-out;
+}
+
+.services .card .card-block p {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.services .card:hover {
+  transition: height 0.5s ease-in-out;
+}
+
+.services .card:hover .card-block p {
+  transition: display 1s ease-in-out;
+}
+
+section.services .card .card-block p {
+  font-size: 15px;
+  line-height: 20px;
+  color: #919191;
+  opacity: 0;
+}
+
+/* gallery */
+section.gallery .work-gallery a {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+}
+
+section.gallery .work-gallery a img {
+  width: 100%;
+}
+
+section.gallery .work-gallery a .hover {
+  background-color: rgba(22, 174, 202, 0.9);
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  color: #fff;
+  opacity: 0;
+  z-index: 9;
+  transition: all .5s ease;
+}
+
+section.gallery .work-gallery a:hover .hover {
+  opacity: 1;
+}
+
+.work-gallery a .hover i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+}
+
+section.gallery .work-gallery .overlay-gallery {
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  width: 102%;
+  height: 100vh;
+  z-index: 30;
+  overflow: hidden;
+  padding: 5% 10%;
+  opacity: 0;
+  transition: all 1s ease;
+  margin-top: -100vh;
+  text-align: right;
+}
+
+section.gallery .work-gallery .overlay-gallery:target {
+  opacity: 1;
+  margin-top: 0;
+}
+
+.gallery-text h3 {
+  font-size: 28px;
+  line-height: 45px;
+  color: #16aeca;
+  margin-bottom: 20px;
+}
+
+.gallery-text ul {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #efefef;
+  padding-right: 0px;
+}
+
+.gallery-text ul li a {
+  color: #919191;
+}
+
+.gallery-text p {
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 30px;
+  color: #919191;
+}
+
+.gallery-text a.visit {
+  font-size: 17px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 25px;
+  margin: 0px 10px;
+  background-color: #16aeca;
+  color: #ffffff;
+  transition: all 0.5s ease-in-out;
+  width: 50% !important;
+
+}
+
+.overlay-gallery img {
+  width: 70%;
+  margin-top: 10%;
+  margin-right: 5%;
+}
+
+.gallery-text {
+  margin-top: 40px;
+}
+
+/* statistics */
+section.statistics {
+  background-image: url(../img/bg2.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+section.statistics .overlay {
+  background-color: rgba(22, 174, 202, 0.8);
+  padding: 100px 0;
+}
+
+section.statistics .overlay .stat p {
+  font-size: 18px;
+  color: #85ecff;
+  line-height: 22px;
+}
+
+section.statistics .overlay .stat .count {
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: bold;
+  Color: #ddfaff;
+}
+
+/* contacts */
+section.contacts {
+  background-color: #ffffff;
+  text-align: right;
+}
+
+section.contacts .info h3 {
+  font-size: 20px;
+  line-height: 20px;
+  color: #16aeca;
+  font-weight: bold;
+}
+
+section.contacts .info ul {
+  padding: 0;
+}
+
+section.contacts .info ul li {
+  font-size: 18px;
+  line-height: 25px;
+  color: #16aeca;
+  margin-bottom: 15px;
+}
+
+section.contacts {
+  background-color: #ffffff;
+  padding-top: 120px;
+}
+
+section.contacts .form form input,
+textarea {
+  background-color: #f7f7f7;
+  border: 2px solid #eee;
+  border-radius: 3px;
+  color: #5c5c5c;
+  font-family: ar-font;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+section.contacts .form form button {
+  background-color: #16aeca;
+  border: 0px;
+  border-radius: 3px;
+  color: #ffffff;
+  font-family: ar-font;
+  font-size: 15px;
+  line-height: 25px;
+  padding: 10px 25px;
+  margin-right: 15px;
+}
+
+section.contacts .cmxform {
+  width: 60%;
+  margin: 0 auto 50px;
+}
+
+/* footer */
+footer .top-footer {
+  background-color: #171717;
+  padding-top: 75px;
+  text-align: right;
+}
+
+footer .top-footer h3 {
+  font-size: 18px;
+  line-height: 45px;
+  color: #85ecff;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* إضافة خط صغير أسفل العنوان */
+footer .top-footer h3:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 35px;
+  height: 2px;
+  background-color: #5c5c5c;
+}
+
+footer .top-footer p {
+  font-size: 15px;
+  line-height: 22px;
+  color: #919191;
+  margin-bottom: 50px;
+}
+
+footer .top-footer ul {
+  padding: 0;
+}
+
+footer .top-footer ul.social li a i {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 2px;
+  background-color: #333333;
+  color: #acacac;
+  transition: all 0.3s ease;
+}
+
+footer .top-footer ul.social li {
+  margin-right: 5px;
+}
+
+footer .top-footer ul.social li a.facebook:hover i {
+  background-color: #3b5999;
+}
+
+footer .top-footer ul.social li a.pinterest:hover i {
+  background-color: #9c3d54;
+}
+
+footer .top-footer ul.social li a.google:hover i {
+  background-color: #cd5d7d;
+}
+
+footer .top-footer ul.social li a.twitter:hover i {
+  background-color: #719fb0;
+}
+
+footer .top-footer ul.social li a.linkedin:hover i {
+  background-color: #23689b;
+}
+
+footer .top-footer ul.contact-us li {
+  margin-bottom: 35px;
+  font-size: 18px;
+  color: #676767;
+}
+
+footer .top-footer ul.contact-us li:last-of-type {
+  margin-bottom: 0;
+}
+
+footer .top-footer ul.contact-us li i {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 2px;
+  background-color: #333333;
+  color: #acacac;
+  margin-left: 20px;
+}
+
+footer .copyright {
+  background-color: #111111;
+}
+
+footer .copyright p {
+  font-size: 15px;
+  line-height: 80px;
+  color: #919191;
+}
+
+/* mobile css collapse button */
+
+@media (max-width: 992px) {
+  nav.navbar ul.navbar-nav li a.nav-link {
+    padding-right: 7px;
+    padding-left: 7px;
+    margin-left: 12px !important;
+    font-size: 14px;
+  }
+
+  nav.navbar ul.navbar-nav {
+    margin-right: 5px !important;
+  }
+
+  .slider .carousel-inner .carousel-item .carousel-caption h3 {
+    font-size: 150% !important;
+    line-height: 40px;
+    margin-left: 2px !important;
+    margin-right: 2px !important;
+  }
+
+  .gallery-text h3 {
+    font-size: 20px;
+    line-height: 40px;
+    color: #16aeca;
+    margin-bottom: 15px;
+  }
+
+  .gallery-text ul {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #efefef;
+    padding-right: 0px;
+  }
+
+  .gallery-text p {
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 25px;
+    color: #919191;
+  }
+
+  .gallery-text a.visit {
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 25px;
+    margin: 0px 10px;
+    background-color: #16aeca;
+    color: #ffffff;
+    transition: all 0.5s ease-in-out;
+    width: 40% !important;
+
+  }
+  
+@media (max-width: 992px) and (min-width: 768px) {
+  .card .card-body p {
+    font-size: 14px;
+  }
+
+  .contacts .info h3,
+  .contacts .info li {
+    font-size: 15px !important;
+  }
+
+  .contacts .map iframe {
+    width: 300px;
+    height: 100;
+  }
+}
+
+/* التنسيقات المطبقة على الشاشات التي عرضها أصغر من 767 بكسل */
+@media (max-width: 767px) {
+  nav.navbar .container {
+    width: 100%;
+  }
+
+  .navbar .navbar-toggler {
+    /* إلغاء الحدود الافتراضية الموجودة على زر القائمة*/
+    outline: none;
+    margin: 0 !important;
+  }
+
+  .navbar .navbar-toggler span {
+    /* لتوسيط ايقونة زر الهاتف فى المنتصف*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav.navbar .navbar-brand img {
+    width: 60%;
+  }
+
+
+  section.contacts .cmxform {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  nav.navbar .navbar-brand img {
+    margin-right: 1px !important;
+  }
+
+  header .overlay .slider .carousel-inner .carousel-item .carousel-caption {
+    left: 2%;
+    right: 2%;
+  }
+
+  header .overlay .slider .carousel-control-prev,
+  header .overlay .slider .carousel-control-next {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .overlay-gallery img {
+    display: none;
+    /* = d-md-block */
+  }
+}}
